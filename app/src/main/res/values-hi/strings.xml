@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DummyApp</string>
+    <string name="Welcome">स्वागत</string>
+    <string name="English">अंग्रेज़ी</string>
+    <string name="hindi">हिंदी</string>
+
+    <string-array name="dataArray">
+        <item>1 रॉबर्ट</item>
+        <item>2 डेनियल</item>
+        <item>3 रोहन</item>
+        <item>4 फिलिप्स</item>
+        <item>5 श्रेया</item>
+        <item>6 रॉबर्ट</item>
+        <item>7 डेनियल</item>
+        <item>8 रोहन</item>
+        <item>9 फिलिप्स</item>
+        <item>10 श्रेया</item>
+        <item>11 रॉबर्ट</item>
+        <item>12 डेनियल</item>
+        <item>13 रोहन</item>
+        <item>14 फिलिप्स</item>
+        <item>15 श्रेया</item>
+        <item>16 रॉबर्ट</item>
+        <item>17 डेनियल</item>
+        <item>18 रोहन</item>
+        <item>19 फिलिप्स</item>
+        <item>20 श्रेया</item>
+        <item>21 रॉबर्ट</item>
+        <item>22 डेनियल</item>
+        <item>23 रोहन</item>
+        <item>24 फिलिप्स</item>
+        <item>25 श्रेया</item>
+        <item>26रॉबर्ट</item>
+        <item>27 डेनियल</item>
+        <item>28 रोहन</item>
+        <item>29 फिलिप्स</item>
+        <item>30 श्रेया</item>
+        <item>31 रॉबर्ट</item>
+        <item>32 डेनियल</item>
+        <item>33रोहन</item>
+        <item>34फिलिप्स</item>
+        <item>35श्रेया</item>
+        <item>36 रॉबर्ट</item>
+        <item>37 डेनियल</item>
+        <item>38 रोहन</item>
+        <item>39 फिलिप्स</item>
+        <item>40श्रेया</item>
+        <item>41 रॉबर्ट</item>
+        <item>42डेनियल</item>
+        <item>43 रोहन</item>
+        <item>44 फिलिप्स</item>
+        <item>45 श्रेया</item>
+        <item>46 रॉबर्ट</item>
+        <item>47 डेनियल</item>
+        <item>48 रोहन</item>
+        <item>49 फिलिप्स</item>
+        <item>50श्रेया</item>
+
+    </string-array>
+
+</resources>

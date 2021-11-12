@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">DummyApp</string>
+    <string name="Welcome">Welcome</string>
+    <string name="English">English</string>
+    <string name="hindi">Hindi</string>
+
+    <string-array name="dataArray">
+        <item>1 Robert</item>
+        <item>2 Denial</item>
+        <item>3 Rohan</item>
+        <item>4 Phillips</item>
+        <item>5 Shreya</item>
+        <item>6 Robert</item>
+        <item>7 Denial</item>
+        <item>8 Rohan</item>
+        <item>9 Phillips</item>
+        <item>10 Shreya</item>
+        <item>11 Robert</item>
+        <item>12 Denial</item>
+        <item>13 Rohan</item>
+        <item>14 Phillips</item>
+        <item>15 Shreya</item>
+        <item>16 Robert</item>
+        <item>17 Denial</item>
+        <item>18 Rohan</item>
+        <item>19 Phillips</item>
+        <item>20 Shreya</item>
+        <item>21 Robert</item>
+        <item>22 Denial</item>
+        <item>23 Rohan</item>
+        <item>24 Phillips</item>
+        <item>25 Shreya</item>
+        <item>26 Robert</item>
+        <item>27 Denial</item>
+        <item>28 Rohan</item>
+        <item>29 Phillips</item>
+        <item>30 Shreya</item>
+        <item>31 Robert</item>
+        <item>32 Denial</item>
+        <item>33 Rohan</item>
+        <item>34 Phillips</item>
+        <item>35 Shreya</item>
+        <item>36 Robert</item>
+        <item>37 Denial</item>
+        <item>38 Rohan</item>
+        <item>39 Phillips</item>
+        <item>40 Shreya</item>
+        <item>41 Robert</item>
+        <item>42 Denial</item>
+        <item>43 Rohan</item>
+        <item>44 Phillips</item>
+        <item>45Shreya</item>
+        <item>46 Robert</item>
+        <item>47 Denial</item>
+        <item>48 Rohan</item>
+        <item>49 Phillips</item>
+        <item>50 Shreya</item>
+
+    </string-array>
+</resources>
