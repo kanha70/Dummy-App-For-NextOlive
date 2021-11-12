@@ -1,63 +1,50 @@
-package com.example.dummyapp;
+package com.example.dummyapp
 
-import android.annotation.TargetApi;
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
-import android.content.res.Resources;
-import android.os.Build;
-import android.preference.PreferenceManager;
+import com.example.dummyapp.LocaleHelper
+import android.os.Build
+import android.content.SharedPreferences
+import android.preference.PreferenceManager
+import android.annotation.TargetApi
+import android.content.Context
+import java.util.*
 
-import java.util.Locale;
-
-public class LocaleHelper {
-
-    public static final String SELECTED_LANGUAGE = "Locale.Helper.Selected.Language";
-
-    public static Context setLocale(Context context, String language){
-        persist(context,language);
-        if(Build.VERSION.SDK_INT  >=  Build.VERSION_CODES.N)
-            return updateResources(context, language);
-
-        return updateResourcesLegacy(context, language);
-
-    }
-    private static void persist(Context context, String language) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
-        SharedPreferences.Editor editor = preferences.edit();
-        editor.putString(SELECTED_LANGUAGE ,language);
-        editor.apply();
-
+object LocaleHelper {
+    const val SELECTED_LANGUAGE = "Locale.Helper.Selected.Language"
+    fun setLocale(context: Context, language: String): Context {
+        persist(context, language)
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) updateResources(
+            context,
+            language
+        ) else updateResourcesLegacy(context, language)
     }
 
-
+    private fun persist(context: Context, language: String) {
+        val preferences = PreferenceManager.getDefaultSharedPreferences(context)
+        val editor = preferences.edit()
+        editor.putString(SELECTED_LANGUAGE, language)
+        editor.apply()
+    }
 
     @TargetApi(Build.VERSION_CODES.N)
-    private static Context updateResources(Context context,String language){
-        Locale locale = new Locale(language);
-        Locale.setDefault(locale);
-
-        Configuration configuration = context.getResources().getConfiguration();
-        configuration.setLocale(locale);
-        configuration.setLayoutDirection(locale);
-
-        return context.createConfigurationContext(configuration);
+    private fun updateResources(context: Context, language: String): Context {
+        val locale = Locale(language)
+        Locale.setDefault(locale)
+        val configuration = context.resources.configuration
+        configuration.setLocale(locale)
+        configuration.setLayoutDirection(locale)
+        return context.createConfigurationContext(configuration)
     }
 
-    @SuppressWarnings("deprecation")
-    private static Context updateResourcesLegacy(Context context, String language){
-        Locale locale = new Locale(language);
-        Locale.setDefault(locale);
-
-        Resources resources = context.getResources();
-
-        Configuration configuration = resources.getConfiguration();
-        configuration.locale = locale;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1){
-            configuration.setLayoutDirection(locale);
+    private fun updateResourcesLegacy(context: Context, language: String): Context {
+        val locale = Locale(language)
+        Locale.setDefault(locale)
+        val resources = context.resources
+        val configuration = resources.configuration
+        configuration.locale = locale
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            configuration.setLayoutDirection(locale)
         }
-        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
-
-        return context;
+        resources.updateConfiguration(configuration, resources.displayMetrics)
+        return context
     }
 }
